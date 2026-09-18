@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franklin Regional Panthers &middot; Game Film &amp; Stats</title>
+<style>
+  :root{ --navy:#182751; --navy2:#20305f; --gold:#d6ca9e; --text:#f4f2ea; --muted:#9aa4c4; }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--navy);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  header{display:flex;align-items:center;gap:16px;padding:24px 20px 20px;border-bottom:1px solid rgba(214,202,158,.2);}
+  .crest{width:56px;height:56px;border-radius:10px;background:#fff;color:var(--navy);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;flex:0 0 auto;
+    font-family:Georgia,serif;}
+  .eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;}
+  h1{margin:0;font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;letter-spacing:.3px;}
+  main{max-width:900px;margin:0 auto;padding:18px 16px 40px;}
+  .record{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;}
+  .record .card{background:var(--navy2);border-radius:12px;padding:12px 6px;text-align:center;}
+  .record .val{font-size:1.2rem;font-weight:700;color:var(--gold);}
+  .record .lab{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:2px;}
+
+  .game-radio{display:none;}
+  .game-row{display:flex;justify-content:space-between;align-items:center;padding:16px 14px;
+    border-bottom:1px solid rgba(214,202,158,.12);cursor:pointer;border-left:3px solid transparent;}
+  .game-radio:checked + .game-row{background:rgba(214,202,158,.08);border-left-color:var(--gold);}
+  .grow-title{font-weight:700;font-size:1.05rem;}
+  .grow-date{color:var(--muted);font-size:.85rem;margin-top:2px;}
+  .grow-score{display:flex;align-items:center;gap:8px;}
+  .pill{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:.8rem;}
+  .pill.w{background:#1f7a3f;color:#fff;}
+  .pill.l{background:#a3312f;color:#fff;}
+  .pill.d{background:#8a7a1f;color:#fff;}
+  .pill.u{background:var(--muted);color:var(--navy);}
+  .score-txt{font-weight:600;color:var(--text);}
+
+  .details{margin-top:22px;}
+  .detail{display:none;}
+  #tab-norwin:checked ~ .details #detail-norwin,
+  #tab-indiana:checked ~ .details #detail-indiana,
+  #tab-kiski:checked ~ .details #detail-kiski,
+  #tab-gateway:checked ~ .details #detail-gateway,
+  #tab-latrobe:checked ~ .details #detail-latrobe,
+  #tab-armstrong:checked ~ .details #detail-armstrong,
+  #tab-allderdice:checked ~ .details #detail-allderdice{display:block;}
+  .video-wrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;margin-bottom:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,.35);}
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  table.box, table.leaders{width:100%;border-collapse:collapse;font-size:.9rem;}
+  table.box th, table.box td, table.leaders th, table.leaders td{padding:9px 6px;
+    border-bottom:1px solid rgba(214,202,158,.12);text-align:left;}
+  table.box th, table.leaders th{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;}
+  .num{text-align:right !important;}
+  .pc{display:flex;align-items:center;gap:9px;}
+  .av{width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);
+    display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;flex:0 0 auto;}
+  .pending{color:var(--muted);padding:28px 4px;font-size:.95rem;text-align:center;}
+
+  .leaders-wrap{background:var(--navy2);border-radius:14px;padding:18px;margin-top:28px;}
+  .leaders-wrap h2{margin:0 0 12px;font-family:Georgia,serif;font-size:1.15rem;color:var(--gold);}
+  table.leaders tr:first-child td{font-weight:700;}
+
+  footer{text-align:center;color:var(--muted);font-size:.78rem;padding:28px 16px 10px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="crest">FR</div>
+  <div>
+    <div class="eyebrow">Match Center</div>
+    <h1>Game Film &amp; Stats</h1>
+  </div>
+</header>
+<main>
+  <div class="record">
+    <div class="card"><div class="val">6-1-0</div><div class="lab">Record</div></div>
+    <div class="card"><div class="val">20</div><div class="lab">Goals For</div></div>
+    <div class="card"><div class="val">2</div><div class="lab">Goals Against</div></div>
+    <div class="card"><div class="val">+18</div><div class="lab">Diff</div></div>
+  </div>
+
+  <input type="radio" name="game" id="tab-norwin" class="game-radio">
+<label for="tab-norwin" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Norwin</div>
+    <div class="grow-date">8/29/26</div>
+  </div>
+  <div class="grow-score"><span class="pill l">L</span><span class="score-txt">1-2</span></div>
+</label>
+<input type="radio" name="game" id="tab-indiana" class="game-radio">
+<label for="tab-indiana" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Indiana</div>
+    <div class="grow-date">9/1/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">3-0</span></div>
+</label>
+<input type="radio" name="game" id="tab-kiski" class="game-radio">
+<label for="tab-kiski" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Kiski</div>
+    <div class="grow-date">9/3/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">5-0</span></div>
+</label>
+<input type="radio" name="game" id="tab-gateway" class="game-radio">
+<label for="tab-gateway" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Gateway</div>
+    <div class="grow-date">9/8/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">1-0</span></div>
+</label>
+<input type="radio" name="game" id="tab-latrobe" class="game-radio">
+<label for="tab-latrobe" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Greater Latrobe</div>
+    <div class="grow-date">9/10/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">3-0</span></div>
+</label>
+<input type="radio" name="game" id="tab-armstrong" class="game-radio">
+<label for="tab-armstrong" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Armstrong</div>
+    <div class="grow-date">9/15/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">6-0</span></div>
+</label>
+<input type="radio" name="game" id="tab-allderdice" class="game-radio" checked>
+<label for="tab-allderdice" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Allderdice</div>
+    <div class="grow-date">9/17/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">1-0</span></div>
+</label>
+
+  <div class="details">
+    <div class="detail" id="detail-norwin">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/wjwf4KCUNDM" title="vs Norwin game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">0</td><td class="num">1</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-indiana">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/S_74eX8AArs" title="vs Indiana game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">1</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">0</td><td class="num">1</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-kiski">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/DVJwuC-xVkw" title="vs Kiski game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">2</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">0</td><td class="num">2</td></tr>
+<tr><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">0</td><td class="num">1</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-gateway">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/yBZJ0bO6GNg" title="vs Gateway game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">0</td><td class="num">1</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-latrobe">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/PeHpq0f2imQ" title="vs Greater Latrobe game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">2</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">0</td><td class="num">2</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-armstrong">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/xSPCYhqTciI" title="vs Armstrong game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">2</td><td class="num">2</td></tr>
+<tr><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">0</td><td class="num">1</td></tr>
+  </table>
+</div>
+<div class="detail" id="detail-allderdice">
+  <div class="pending">Final: 1-0 &middot; Goal: Own goal (Allderdice). Game film coming soon.</div>
+</div>
+  </div>
+
+  <div class="leaders-wrap">
+    <h2>Season Point Leaders</h2>
+    <table class="leaders">
+      <tr><th>#</th><th>Player</th><th class="num">G</th><th class="num">A</th><th class="num">Pts</th><th class="num">Pts/Gm</th></tr>
+      <tr><td>1</td><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">4</td><td class="num">3</td><td class="num">11</td><td class="num">1.83</td></tr>
+<tr><td>2</td><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">2</td><td class="num">4</td><td class="num">8</td><td class="num">1.33</td></tr>
+<tr><td>3</td><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">3</td><td class="num">2</td><td class="num">8</td><td class="num">1.33</td></tr>
+<tr><td>4</td><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">3</td><td class="num">1</td><td class="num">7</td><td class="num">1.4</td></tr>
+<tr><td>5</td><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">3</td><td class="num">0</td><td class="num">6</td><td class="num">1.0</td></tr>
+<tr><td>6</td><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">1</td><td class="num">2</td><td class="num">4</td><td class="num">0.67</td></tr>
+<tr><td>7</td><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">0</td><td class="num">3</td><td class="num">3</td><td class="num">0.5</td></tr>
+<tr><td>8</td><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.33</td></tr>
+<tr><td>9</td><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.33</td></tr>
+<tr><td>10</td><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.33</td></tr>
+<tr><td>11</td><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.17</td></tr>
+<tr><td>12</td><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.17</td></tr>
+<tr><td>13</td><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.17</td></tr>
+    </table>
+  </div>
+</main>
+<footer>Franklin Regional Panthers &middot; Season through Allderdice (9/17/26)</footer>
+</body>
+</html>
