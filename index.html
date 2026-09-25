@@ -44,7 +44,8 @@
   #tab-latrobe:checked ~ .details #detail-latrobe,
   #tab-armstrong:checked ~ .details #detail-armstrong,
   #tab-allderdice:checked ~ .details #detail-allderdice{display:block;}
-  #tab-greensburg-salem:checked ~ .details #detail-greensburg-salem{display:block;}
+  #tab-greensburg-salem:checked ~ .details #detail-greensburg-salem,
+  #tab-penn-trafford:checked ~ .details #detail-penn-trafford{display:block;}
   .video-wrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;margin-bottom:16px;
     box-shadow:0 4px 18px rgba(0,0,0,.35);}
   .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
@@ -75,7 +76,7 @@
 </header>
 <main>
   <div class="record">
-    <div class="card"><div class="val">7-1-0</div><div class="lab">Record</div></div>
+    <div class="card"><div class="val">7-1-1</div><div class="lab">Record</div></div>
     <div class="card"><div class="val">24</div><div class="lab">Goals For</div></div>
     <div class="card"><div class="val">2</div><div class="lab">Goals Against</div></div>
     <div class="card"><div class="val">+22</div><div class="lab">Diff</div></div>
@@ -137,13 +138,22 @@
   </div>
   <div class="grow-score"><span class="pill w">W</span><span class="score-txt">1-0</span></div>
 </label>
-<input type="radio" name="game" id="tab-greensburg-salem" class="game-radio" checked>
+<input type="radio" name="game" id="tab-greensburg-salem" class="game-radio">
 <label for="tab-greensburg-salem" class="game-row">
   <div class="grow">
     <div class="grow-title">vs Greensburg Salem</div>
     <div class="grow-date">9/22/26</div>
   </div>
   <div class="grow-score"><span class="pill w">W</span><span class="score-txt">4-0</span></div>
+</label>
+
+<input type="radio" name="game" id="tab-penn-trafford" class="game-radio" checked>
+<label for="tab-penn-trafford" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Penn Trafford</div>
+    <div class="grow-date">9/24/26</div>
+  </div>
+  <div class="grow-score"><span class="pill d">D</span><span class="score-txt">0-0</span></div>
 </label>
 
   <div class="details">
@@ -246,30 +256,37 @@
 <tr><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">0</td><td class="num">1</td></tr>
   </table>
 </div>
+<div class="detail" id="detail-penn-trafford">
+  <div class="pending">Game film coming soon</div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td colspan="3" style="color:var(--muted)">No goals or assists &mdash; 0-0 draw</td></tr>
+  </table>
+</div>
   </div>
 
   <div class="leaders-wrap">
     <h2>Season Point Leaders</h2>
     <table class="leaders">
       <tr><th>#</th><th>Player</th><th class="num">G</th><th class="num">A</th><th class="num">Pts</th><th class="num">Pts/Gm</th></tr>
-      <tr><td>1</td><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">5</td><td class="num">4</td><td class="num">14</td><td class="num">1.75</td></tr>
-<tr><td>2</td><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">4</td><td class="num">2</td><td class="num">10</td><td class="num">1.25</td></tr>
+      <tr><td>1</td><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">5</td><td class="num">4</td><td class="num">14</td><td class="num">1.56</td></tr>
+<tr><td>2</td><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">4</td><td class="num">2</td><td class="num">10</td><td class="num">1.11</td></tr>
 <tr><td>3</td><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">4</td><td class="num">1</td><td class="num">9</td><td class="num">1.29</td></tr>
 <tr><td>4</td><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">2</td><td class="num">4</td><td class="num">8</td><td class="num">1.0</td></tr>
-<tr><td>5</td><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">3</td><td class="num">0</td><td class="num">6</td><td class="num">0.75</td></tr>
-<tr><td>6</td><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">1</td><td class="num">3</td><td class="num">5</td><td class="num">0.62</td></tr>
-<tr><td>7</td><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">0.5</td></tr>
-<tr><td>8</td><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">1</td><td class="num">3</td><td class="num">0.38</td></tr>
-<tr><td>9</td><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.25</td></tr>
-<tr><td>10</td><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.25</td></tr>
-<tr><td>11</td><td><span class="pc"><span class="av">10</span>Ian Johns</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.25</td></tr>
-<tr><td>12</td><td><span class="pc"><span class="av">23</span>Parker Weidner</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.25</td></tr>
-<tr><td>13</td><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.12</td></tr>
-<tr><td>14</td><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.12</td></tr>
-<tr><td>15</td><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.12</td></tr>
+<tr><td>5</td><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">3</td><td class="num">0</td><td class="num">6</td><td class="num">0.67</td></tr>
+<tr><td>6</td><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">1</td><td class="num">3</td><td class="num">5</td><td class="num">0.56</td></tr>
+<tr><td>7</td><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">0</td><td class="num">4</td><td class="num">4</td><td class="num">0.44</td></tr>
+<tr><td>8</td><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">1</td><td class="num">3</td><td class="num">0.33</td></tr>
+<tr><td>9</td><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.22</td></tr>
+<tr><td>10</td><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.22</td></tr>
+<tr><td>11</td><td><span class="pc"><span class="av">10</span>Ian Johns</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.22</td></tr>
+<tr><td>12</td><td><span class="pc"><span class="av">23</span>Parker Weidner</span></td><td class="num">1</td><td class="num">0</td><td class="num">2</td><td class="num">0.22</td></tr>
+<tr><td>13</td><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.11</td></tr>
+<tr><td>14</td><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.11</td></tr>
+<tr><td>15</td><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0.11</td></tr>
     </table>
   </div>
 </main>
-<footer>Franklin Regional Panthers &middot; Season through Greensburg Salem (9/22/26)</footer>
+<footer>Franklin Regional Panthers &middot; Season through Penn Trafford (9/24/26)</footer>
 </body>
 </html>
