@@ -53,7 +53,8 @@
   #tab-armstrong-2:checked ~ .details #detail-armstrong-2,
   #tab-hempfield:checked ~ .details #detail-hempfield,
   #tab-greensburg-salem-2:checked ~ .details #detail-greensburg-salem-2,
-  #tab-penn-trafford-2:checked ~ .details #detail-penn-trafford-2{display:block;}
+  #tab-penn-trafford-2:checked ~ .details #detail-penn-trafford-2,
+  #tab-shaler:checked ~ .details #detail-shaler{display:block;}
   .video-wrap{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;margin-bottom:16px;
     box-shadow:0 4px 18px rgba(0,0,0,.35);}
   .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
@@ -84,10 +85,10 @@
 </header>
 <main>
   <div class="record">
-    <div class="card"><div class="val">14-1-2</div><div class="lab">Record</div></div>
-    <div class="card"><div class="val">72</div><div class="lab">Goals For</div></div>
-    <div class="card"><div class="val">4</div><div class="lab">Goals Against</div></div>
-    <div class="card"><div class="val">+68</div><div class="lab">Diff</div></div>
+    <div class="card"><div class="val">15-1-2</div><div class="lab">Record</div></div>
+    <div class="card"><div class="val">74</div><div class="lab">Goals For</div></div>
+    <div class="card"><div class="val">5</div><div class="lab">Goals Against</div></div>
+    <div class="card"><div class="val">+69</div><div class="lab">Diff</div></div>
   </div>
 
   <input type="radio" name="game" id="tab-norwin" class="game-radio">
@@ -227,13 +228,22 @@
   <div class="grow-score"><span class="pill w">W</span><span class="score-txt">12-0</span></div>
 </label>
 
-<input type="radio" name="game" id="tab-penn-trafford-2" class="game-radio" checked>
+<input type="radio" name="game" id="tab-penn-trafford-2" class="game-radio">
 <label for="tab-penn-trafford-2" class="game-row">
   <div class="grow">
     <div class="grow-title">vs Penn Trafford</div>
     <div class="grow-date">10/20/26</div>
   </div>
   <div class="grow-score"><span class="pill w">W</span><span class="score-txt">5-0</span></div>
+</label>
+
+<input type="radio" name="game" id="tab-shaler" class="game-radio" checked>
+<label for="tab-shaler" class="game-row">
+  <div class="grow">
+    <div class="grow-title">vs Shaler Area</div>
+    <div class="grow-date">10/24/26</div>
+  </div>
+  <div class="grow-score"><span class="pill w">W</span><span class="score-txt">2-1</span></div>
 </label>
 
   <div class="details">
@@ -464,36 +474,48 @@
 <tr><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">0</td><td class="num">1</td></tr>
   </table>
 </div>
+<div class="detail" id="detail-shaler">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/MZxqaEKyzCQ" title="vs Shaler Area game film" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <table class="box">
+    <tr><th>Player</th><th class="num">G</th><th class="num">A</th></tr>
+    <tr><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">10</span>Ian Johns</span></td><td class="num">1</td><td class="num">0</td></tr>
+<tr><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">0</td><td class="num">1</td></tr>
+<tr><td colspan="3" style="color:var(--muted)">Alexander goal on penalty kick</td></tr>
+  </table>
+</div>
   </div>
 
   <div class="leaders-wrap">
     <h2>Season Point Leaders</h2>
     <table class="leaders">
       <tr><th>#</th><th>Player</th><th class="num">G</th><th class="num">A</th><th class="num">GP</th><th class="num">Pts</th><th class="num">Pts/Gm</th></tr>
-<tr><td>1</td><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">12</td><td class="num">8</td><td class="num">17</td><td class="num">32</td><td class="num">1.88</td></tr>
-<tr><td>2</td><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">11</td><td class="num">2</td><td class="num">17</td><td class="num">24</td><td class="num">1.41</td></tr>
-<tr><td>3</td><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">7</td><td class="num">4</td><td class="num">15</td><td class="num">18</td><td class="num">1.20</td></tr>
-<tr><td>4</td><td><span class="pc"><span class="av">10</span>Ian Johns</span></td><td class="num">7</td><td class="num">3</td><td class="num">16</td><td class="num">17</td><td class="num">1.06</td></tr>
-<tr><td>5</td><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">6</td><td class="num">4</td><td class="num">17</td><td class="num">16</td><td class="num">0.94</td></tr>
-<tr><td>6</td><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">6</td><td class="num">4</td><td class="num">17</td><td class="num">16</td><td class="num">0.94</td></tr>
-<tr><td>7</td><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">3</td><td class="num">10</td><td class="num">17</td><td class="num">16</td><td class="num">0.94</td></tr>
-<tr><td>8</td><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">4</td><td class="num">5</td><td class="num">15</td><td class="num">13</td><td class="num">0.87</td></tr>
-<tr><td>9</td><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">2</td><td class="num">7</td><td class="num">17</td><td class="num">11</td><td class="num">0.65</td></tr>
-<tr><td>10</td><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">1</td><td class="num">6</td><td class="num">17</td><td class="num">8</td><td class="num">0.47</td></tr>
-<tr><td>11</td><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">1</td><td class="num">4</td><td class="num">17</td><td class="num">6</td><td class="num">0.35</td></tr>
-<tr><td>12</td><td><span class="pc"><span class="av">23</span>Parker Weidner</span></td><td class="num">2</td><td class="num">0</td><td class="num">17</td><td class="num">4</td><td class="num">0.24</td></tr>
-<tr><td>13</td><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">1</td><td class="num">17</td><td class="num">3</td><td class="num">0.18</td></tr>
-<tr><td>14</td><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">1</td><td class="num">1</td><td class="num">17</td><td class="num">3</td><td class="num">0.18</td></tr>
-<tr><td>15</td><td><span class="pc"><span class="av">99</span>Nathan Hussey</span></td><td class="num">1</td><td class="num">0</td><td class="num">5</td><td class="num">2</td><td class="num">0.40</td></tr>
-<tr><td>16</td><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td><td class="num">17</td><td class="num">2</td><td class="num">0.12</td></tr>
-<tr><td>17</td><td><span class="pc"><span class="av">5</span>Isaac Hicks</span></td><td class="num">1</td><td class="num">0</td><td class="num">17</td><td class="num">2</td><td class="num">0.12</td></tr>
-<tr><td>18</td><td><span class="pc"><span class="av">24</span>Sam Komar</span></td><td class="num">1</td><td class="num">0</td><td class="num">17</td><td class="num">2</td><td class="num">0.12</td></tr>
-<tr><td>19</td><td><span class="pc"><span class="av">26</span>Aaron Honko</span></td><td class="num">1</td><td class="num">0</td><td class="num">17</td><td class="num">2</td><td class="num">0.12</td></tr>
-<tr><td>20</td><td><span class="pc"><span class="av">33</span>Beckett Bumbera</span></td><td class="num">1</td><td class="num">0</td><td class="num">17</td><td class="num">2</td><td class="num">0.12</td></tr>
-<tr><td>21</td><td><span class="pc"><span class="av">29</span>Colton Walker</span></td><td class="num">0</td><td class="num">1</td><td class="num">17</td><td class="num">1</td><td class="num">0.06</td></tr>
+<tr><td>1</td><td><span class="pc"><span class="av">7</span>Aiden Alexander</span></td><td class="num">13</td><td class="num">8</td><td class="num">18</td><td class="num">34</td><td class="num">1.89</td></tr>
+<tr><td>2</td><td><span class="pc"><span class="av">11</span>Andrew Acosta</span></td><td class="num">11</td><td class="num">3</td><td class="num">18</td><td class="num">25</td><td class="num">1.39</td></tr>
+<tr><td>3</td><td><span class="pc"><span class="av">10</span>Ian Johns</span></td><td class="num">8</td><td class="num">3</td><td class="num">17</td><td class="num">19</td><td class="num">1.12</td></tr>
+<tr><td>4</td><td><span class="pc"><span class="av">6</span>Michael Hillebrand</span></td><td class="num">7</td><td class="num">4</td><td class="num">16</td><td class="num">18</td><td class="num">1.12</td></tr>
+<tr><td>5</td><td><span class="pc"><span class="av">40</span>Thomas Bridges</span></td><td class="num">6</td><td class="num">4</td><td class="num">18</td><td class="num">16</td><td class="num">0.89</td></tr>
+<tr><td>6</td><td><span class="pc"><span class="av">2</span>Josh Smith</span></td><td class="num">6</td><td class="num">4</td><td class="num">18</td><td class="num">16</td><td class="num">0.89</td></tr>
+<tr><td>7</td><td><span class="pc"><span class="av">8</span>Rory Bayne</span></td><td class="num">3</td><td class="num">10</td><td class="num">18</td><td class="num">16</td><td class="num">0.89</td></tr>
+<tr><td>8</td><td><span class="pc"><span class="av">19</span>Luca Aguilera</span></td><td class="num">4</td><td class="num">5</td><td class="num">16</td><td class="num">13</td><td class="num">0.81</td></tr>
+<tr><td>9</td><td><span class="pc"><span class="av">21</span>Ethan Falvo</span></td><td class="num">2</td><td class="num">7</td><td class="num">18</td><td class="num">11</td><td class="num">0.61</td></tr>
+<tr><td>10</td><td><span class="pc"><span class="av">9</span>Daniel Todd</span></td><td class="num">1</td><td class="num">6</td><td class="num">18</td><td class="num">8</td><td class="num">0.44</td></tr>
+<tr><td>11</td><td><span class="pc"><span class="av">18</span>Matthew Mains-Becerra</span></td><td class="num">1</td><td class="num">4</td><td class="num">18</td><td class="num">6</td><td class="num">0.33</td></tr>
+<tr><td>12</td><td><span class="pc"><span class="av">23</span>Parker Weidner</span></td><td class="num">2</td><td class="num">0</td><td class="num">18</td><td class="num">4</td><td class="num">0.22</td></tr>
+<tr><td>13</td><td><span class="pc"><span class="av">30</span>Khai Sheetz</span></td><td class="num">1</td><td class="num">1</td><td class="num">18</td><td class="num">3</td><td class="num">0.17</td></tr>
+<tr><td>14</td><td><span class="pc"><span class="av">17</span>Nick Murray</span></td><td class="num">1</td><td class="num">1</td><td class="num">18</td><td class="num">3</td><td class="num">0.17</td></tr>
+<tr><td>15</td><td><span class="pc"><span class="av">99</span>Nathan Hussey</span></td><td class="num">1</td><td class="num">0</td><td class="num">6</td><td class="num">2</td><td class="num">0.33</td></tr>
+<tr><td>16</td><td><span class="pc"><span class="av">12</span>Liam Greenbaum</span></td><td class="num">1</td><td class="num">0</td><td class="num">18</td><td class="num">2</td><td class="num">0.11</td></tr>
+<tr><td>17</td><td><span class="pc"><span class="av">5</span>Isaac Hicks</span></td><td class="num">1</td><td class="num">0</td><td class="num">18</td><td class="num">2</td><td class="num">0.11</td></tr>
+<tr><td>18</td><td><span class="pc"><span class="av">24</span>Sam Komar</span></td><td class="num">1</td><td class="num">0</td><td class="num">18</td><td class="num">2</td><td class="num">0.11</td></tr>
+<tr><td>19</td><td><span class="pc"><span class="av">26</span>Aaron Honko</span></td><td class="num">1</td><td class="num">0</td><td class="num">18</td><td class="num">2</td><td class="num">0.11</td></tr>
+<tr><td>20</td><td><span class="pc"><span class="av">33</span>Beckett Bumbera</span></td><td class="num">1</td><td class="num">0</td><td class="num">18</td><td class="num">2</td><td class="num">0.11</td></tr>
+<tr><td>21</td><td><span class="pc"><span class="av">29</span>Colton Walker</span></td><td class="num">0</td><td class="num">1</td><td class="num">18</td><td class="num">1</td><td class="num">0.06</td></tr>
     </table>
   </div>
 </main>
-<footer>Franklin Regional Panthers &middot; Season through Penn Trafford (10/20/26)</footer>
+<footer>Franklin Regional Panthers &middot; Season through Shaler Area (10/24/26)</footer>
 </body>
 </html>
